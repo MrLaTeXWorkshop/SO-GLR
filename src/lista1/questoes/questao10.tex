@@ -4,86 +4,29 @@
   
     \begin{enumerate}[label=\textbf{\alph*})]
 
-        \item 
+        \item Round-robin 
         
-        L = $(a^nb^na^nb^n | n > 0 )$
+        \begin{equation*}
+            \frac{96}{5} = 19.2 \text{ min }
+        \end{equation*}
 
-        Hipótese: L é uma LLC.
-    
-        Existe uma GLG G que está na FNC e que contém K 
-    
-        variáveis tal que L(G) = L.
-    
-        Considere z = $a^nb^n$ $b^na^n$ $a^nb^n$ tal que n > 0
-    
-        Como | z | > $2^{K-1}$ pelo LB:
-    
-        \begin{enumerate}[label=\textbf{\arabic*})]
-            \item z = uvqxy 
-            \item |vqx| $\leq$ 0
-            \item | v | + | x | > 0
-            \item $z_i$ = u$v^i$ q$x^i$y, $z_i$ $\in$ L(G) para todo i $\geq$ 0.
-        \end{enumerate}
-
-        \textbf{Caso exemplo:} v e x contendo a's e b's
-
-        *z = $a^n$ $b^n$ $b^na^n$ $a^nb^n$
-
-        \item 
+        \item Escalonamento com prioridade 
         
-        L = $(0^n1^{2n}2^n | n > 0 )$
+        \begin{equation*}
+            \frac{80}{5} = 16 \text{ min }
+        \end{equation*}
 
-        Hipótese: L é uma LLC.
-    
-        Existe uma GLG G que está na FNC e que contém K 
-    
-        variáveis tal que L(G) = L.
-    
-        Considere z = $0^n1^n2^n$ $0^n1^n2^n$ $0^n1^n2^n$ tal que n > 0
-    
-        Como | z | > 0 pelo LB:
+        \item FCFS 
 
-        \begin{enumerate}[label=\textbf{\arabic*})]
-            \item z = uvqxy 
-            \item |vqx| $\leq$ 0
-            \item | v | + | x | > 0
-            \item  $z_i$ = u$v^i$ q$x^i$y, $z_i$ $\in$ L(G) para todo i $\geq$ 0.
-        \end{enumerate}
+        \begin{equation*}
+            \frac{96}{5} = 19.2 \text{ min }
+        \end{equation*}
 
-        \textbf{Caso exemplo:} v e x contendo 0's e 1's e 2's
+        \item SJF 
 
-        *z = $a^n$ $b^n$ $b^na^n$ $a^nb^n$
-
-        \item 
-        
-        L = $(ww^{R}w | w \in (a,b)^{*} )$
-
-        Hipótese: L é uma LLC.
-    
-        Existe uma GLG G que está na FNC e que contém K 
-    
-        variáveis tal que L(G) = L.
-    
-        Considere z = $a^nb^n$ $b^na^n$ $a^nb^n$ tal que n = $2^K$
-    
-        Como | z | > $2^{K-1}$ pelo LB:
-    
-        \begin{enumerate}[label=\textbf{\arabic*})]
-            \item z = uvqxy 
-            \item |vqx| $\leq$ $2^K$
-            \item | v | + | x | > 0
-            \item  $z_i$ = u$v^i$ q$x^i$y, $z_i$ $\in$ L(G) para todo i $\geq$ 0.
-        \end{enumerate}
-
-        \textbf{Caso exemplo:} v e x contendo a's e b's
-
-        *z = $a^n$ $b^nb^n$ $a^n$ $a^nb^n$
-
-        vqx y
-
-        Bombeamento v e/ou x aumenta/diminui o número de a's do 
-        primeiro w mas não o do segundo $w^R$
-
+        \begin{equation*}
+            \frac{70}{5} = 14 \text{ min }
+        \end{equation*}
     \end{enumerate}
 
 \end{question}

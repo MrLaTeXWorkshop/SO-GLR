@@ -1,88 +1,48 @@
-\newpage
-
 \begin{question}
   
+    T $\rightarrow$ Tempo de execução do processo antes de ser bloqueado por I/O 
+
+    S $\rightarrow$ Overhead da troca de contexto
+
+    Q $\rightarrow$ Tempo de execução máxima dentro da Round-Robin
+
     \begin{enumerate}[label=\textbf{\alph*})]
 
-        \item 
+        \item $ Q = a $
         
-        L = $(a^nb^na^nb^n | n > 0 )$
-
-        Hipótese: L é uma LLC.
-    
-        Existe uma GLG G que está na FNC e que contém K 
-    
-        variáveis tal que L(G) = L.
-    
-        Considere z = $a^nb^n$ $b^na^n$ $a^nb^n$ tal que n > 0
-    
-        Como | z | > $2^{K-1}$ pelo LB:
-    
-        \begin{enumerate}[label=\textbf{\arabic*})]
-            \item z = uvqxy 
-            \item |vqx| $\leq$ 0
-            \item | v | + | x | > 0
-            \item $z_i$ = u$v^i$ q$x^i$y, $z_i$ $\in$ L(G) para todo i $\geq$ 0.
-        \end{enumerate}
-
-        \textbf{Caso exemplo:} v e x contendo a's e b's
-
-        *z = $a^n$ $b^n$ $b^na^n$ $a^nb^n$
-
-        \item 
+        \begin{equation*}
+            \frac{T}{T+S}
+        \end{equation*}
         
-        L = $(0^n1^{2n}2^n | n > 0 )$
-
-        Hipótese: L é uma LLC.
-    
-        Existe uma GLG G que está na FNC e que contém K 
-    
-        variáveis tal que L(G) = L.
-    
-        Considere z = $0^n1^n2^n$ $0^n1^n2^n$ $0^n1^n2^n$ tal que n > 0
-    
-        Como | z | > 0 pelo LB:
-
-        \begin{enumerate}[label=\textbf{\arabic*})]
-            \item z = uvqxy 
-            \item |vqx| $\leq$ 0
-            \item | v | + | x | > 0
-            \item  $z_i$ = u$v^i$ q$x^i$y, $z_i$ $\in$ L(G) para todo i $\geq$ 0.
-        \end{enumerate}
-
-        \textbf{Caso exemplo:} v e x contendo 0's e 1's e 2's
-
-        *z = $a^n$ $b^n$ $b^na^n$ $a^nb^n$
-
-        \item 
+        \item $ Q = a $
         
-        L = $(ww^{R}w | w \in (a,b)^{*} )$
+        \begin{equation*}
+            \frac{T}{T+S}
+        \end{equation*}
 
-        Hipótese: L é uma LLC.
-    
-        Existe uma GLG G que está na FNC e que contém K 
-    
-        variáveis tal que L(G) = L.
-    
-        Considere z = $a^nb^n$ $b^na^n$ $a^nb^n$ tal que n = $2^K$
-    
-        Como | z | > $2^{K-1}$ pelo LB:
-    
-        \begin{enumerate}[label=\textbf{\arabic*})]
-            \item z = uvqxy 
-            \item |vqx| $\leq$ $2^K$
-            \item | v | + | x | > 0
-            \item  $z_i$ = u$v^i$ q$x^i$y, $z_i$ $\in$ L(G) para todo i $\geq$ 0.
-        \end{enumerate}
+        \item $ Q > T $
+        
+        \begin{equation*}
+            \frac{T}{T+S}
+        \end{equation*}
 
-        \textbf{Caso exemplo:} v e x contendo a's e b's
+        \item $ S < Q < T $
+        
+        \begin{equation*}
+            \frac{T}{T+S*\frac{T}{Q}}
+        \end{equation*}
 
-        *z = $a^n$ $b^nb^n$ $a^n$ $a^nb^n$
+        \item $ Q = S $
+        
+        \begin{equation*}
+            \frac{T}{2T}
+        \end{equation*}
 
-        vqx y
-
-        Bombeamento v e/ou x aumenta/diminui o número de a's do 
-        primeiro w mas não o do segundo $w^R$
+        \item Q próximo de 0
+        
+        \begin{equation*}
+            0\%
+        \end{equation*}
 
     \end{enumerate}
 
