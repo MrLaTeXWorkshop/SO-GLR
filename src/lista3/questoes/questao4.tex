@@ -2,8 +2,61 @@
 
      Não seria possível armazenar o programa com uma página de 4096, pois seria 
      necessário de uma página a mais para armazenar o programa, algo que o
-     computador não possui de espaço livre. Se o tamanho da página fosse mudado
+     computador não possui de espaço livre. 
+
+     \begin{table}[ht]
+     
+          \parbox{.45\linewidth}
+          {
+          \centering 
+          \begin{tabular}{|c|c|c|}
+               \hline 
+               65kb & 4kb & 16 páginas \\ 
+               \hline  
+               32kb & 4kb & 8 páginas \\ 
+               \hline 
+               16kb & 4kb & 5 páginas \\ 
+               \hline 
+          \end{tabular}
+          }
+          \parbox{.45\linewidth}
+          {
+          \centering 
+          \begin{equation}
+               8 + 5 + 3 \leq 16
+          \end{equation}
+          }
+     \end{table}
+
+     Se o tamanho da página fosse mudado
      para 512 bytes, ai seria possível, pois o tamanho necessário para armazenar o 
      programa conseguiria caber em um número inteiro de páginas, sem ultrapassar o limite 
      de espaço.
+
+     \begin{table}[ht]
+     
+          \parbox{.45\linewidth}
+          {
+          \centering 
+          \begin{tabular}{|c|c|c|}
+               \hline 
+               65kb & 512b & 128 páginas \\ 
+               \hline  
+               32kb & 512b & 64 páginas \\ 
+               \hline 
+               16kb & 512b & 33 páginas \\ 
+               \hline 
+               16kb - 512b & 512b & 31 páginas \\ 
+               \hline 
+          \end{tabular}
+          }
+          \parbox{.45\linewidth}
+          {
+          \centering 
+          \begin{equation}
+               64 + 33 + 31 \geq 128
+          \end{equation}
+          }
+     \end{table}
+
 \end{question}

@@ -1,14 +1,20 @@
 \begin{question}
 
-  As condições necessárias para a ocorrência de um deadlock são:
-  \begin{itemize}
-    \item \textbf{Exclusão mútua} - Apenas um processo pode usar um recurso em um tempo determinado.
-    \item \textbf{Retenção de recursos} - Um processo está segurando um recurso e 
-    requisitando outros recursos que estão sendo segurados por outros processos.
-    \item \textbf{Sem precedência do recurso} - um recurso só pode ser liberado de forma voluntária pelo 
-    processo que está segurando tal recurso.
-    \item \textbf{Espera circular} - Formação de um circulo onde um processo (X1) está segurando um recurso (Y1) e está esperando pelo recurso (Y2) 
-    de outro processo (X2), enquanto o mesmo está esperando o recurso (Y1) do outro processo (X1).
-  \end{itemize}
+  \begin{equation}
+    \frac{N + T*K}{K} , \text{se } T = 1 \rightarrow \frac{N}{K} + 1
+  \end{equation}
+
+  \begin{table}[ht]
+    \centering 
+    \begin{tabular}{|c|c|}
+          \hline 
+          \textbf{N} & tempo adicional de microsegundos \\ 
+          \hline  
+          \textbf{T} & total de instruções \\ 
+          \hline 
+          \textbf{K} & quantidade de instruções \\ 
+          \hline 
+    \end{tabular}
+  \end{table}
 
 \end{question}
