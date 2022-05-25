@@ -1,0 +1,20 @@
+\begin{question}
+
+  Em mapeamento de alocação de memória contígua de endereços virtuais para endereços físicos não é uma tarefa difícil, pois se
+  pegar um processo da memória secundária e copiá-lo para a memória principal, os endereços serão armazenados de forma contígua,
+  então se soubermos o endereço base do processo, podemos descobrir os próximos endereços.
+
+  A Unidade de Gerenciamento de Memória é uma combinação de 2 registradores –
+  
+  Cadastro de Base (Registro de Realocação)
+  Registro de limite.
+  Base Register – contém o endereço físico inicial do processo.
+  Limit Register - menciona o limite relativo ao endereço base na região ocupada pelo processo.
+  
+  O endereço lógico gerado pela CPU é verificado primeiro pelo registrador de limite, se o valor do endereço lógico
+  gerado é menor que o valor do registrador limite, o endereço base armazenado no registrador de realocação é adicionado
+  ao endereço lógico para obter o endereço físico do local de memória.
+  
+  Se o valor do endereço lógico for maior que o registrador de limite, a CPU intercepta o sistema operacional e o sistema operacional termina
+  o programa dando erro fatal.
+\end{question}
